@@ -26,8 +26,8 @@ node --version
 Clone using the URL shown by the GitHub **Code** button:
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/haodev93/crossstaff.git
+cd crossstaff
 ```
 
 Create `.env`:

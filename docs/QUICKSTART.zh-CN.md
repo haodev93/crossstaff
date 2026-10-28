@@ -26,8 +26,8 @@ node --version
 从 GitHub 的 **Code** 按钮获取仓库地址：
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/haodev93/crossstaff.git
+cd crossstaff
 ```
 
 创建 `.env`。

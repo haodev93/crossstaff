@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/haodev93/crossstaff/actions/workflows/ci.yml"><img src="https://github.com/haodev93/crossstaff/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square" alt="CI 状态"></a>
   <a href="docs/PLATFORMS.zh-CN.md"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-0b755b?style=flat-square" alt="Windows、macOS 和 Linux"></a>
   <img src="https://img.shields.io/badge/runtime-Node.js%2024-339933?logo=node.js&logoColor=white&style=flat-square" alt="Node.js 24">
   <img src="https://img.shields.io/badge/storage-SQLite-003b57?logo=sqlite&style=flat-square" alt="SQLite">
@@ -108,8 +109,8 @@ Workflow 总目标始终是更高层契约。环节目标只能缩小责任范�
 **要求 Node.js 24 或更高版本。** 当前没有第三方运行时依赖。
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/haodev93/crossstaff.git
+cd crossstaff
 npm start
 ```
 

@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/haodev93/crossstaff/actions/workflows/ci.yml"><img src="https://github.com/haodev93/crossstaff/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square" alt="CI status"></a>
   <a href="docs/PLATFORMS.md"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-0b755b?style=flat-square" alt="Windows, macOS, and Linux"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/runtime-Node.js%2024-339933?logo=node.js&logoColor=white&style=flat-square" alt="Node.js 24"></a>
   <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/storage-SQLite-003b57?logo=sqlite&style=flat-square" alt="SQLite"></a>
@@ -108,8 +109,8 @@ The workflow objective remains the higher-level contract. A step narrows respons
 **Requires Node.js 24+.** There are no third-party runtime dependencies.
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/haodev93/crossstaff.git
+cd crossstaff
 npm start
 ```
 
