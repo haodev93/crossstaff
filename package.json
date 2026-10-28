@@ -1,0 +1,17 @@
+{
+  "name": "crossstaff",
+  "version": "0.3.0",
+  "description": "A local-first workspace for managing, collaborating with, and evaluating digital employees.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node --check src/app.js && node --check src/adapters.js && node --check src/db.js && node --check src/orchestrator.js && node --check public/app.js && node --check public/i18n.js"
+  }
+}
