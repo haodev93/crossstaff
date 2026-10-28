@@ -33,7 +33,7 @@ test("POSIX Codex helper isolates the CLI profile", { skip: !isPosix }, () => {
       codexPath,
       [
         "#!/usr/bin/env sh",
-        'printf "%s|%s\\n" "$1" "$CODEX_HOME" >> "$CROSSSTAFF_TEST_LOG"',
+        'printf "%s|%s\\n" "$*" "$CODEX_HOME" >> "$CROSSSTAFF_TEST_LOG"',
         "",
       ].join("\n"),
       "utf8",
@@ -56,7 +56,7 @@ test("POSIX Codex helper isolates the CLI profile", { skip: !isPosix }, () => {
     const calls = readFileSync(commandLog, "utf8").trim().split(/\r?\n/);
     assert.deepEqual(calls, [
       `login|${isolatedHome}`,
-      `status|${isolatedHome}`,
+      `login status|${isolatedHome}`,
     ]);
   } finally {
     rmSync(tempDir, { recursive: true, force: true });
