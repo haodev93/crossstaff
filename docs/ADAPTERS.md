@@ -197,7 +197,7 @@ Command:
 codex
 
 Arguments JSON:
-["exec","--sandbox","workspace-write","--color","never","--ephemeral","-"]
+["exec","--model","gpt-6-luna","--sandbox","workspace-write","--color","never","--ephemeral","-"]
 
 Working directory:
 C:\path\to\your\repo
@@ -215,7 +215,7 @@ Command:
 codex
 
 Arguments JSON:
-["exec","--sandbox","read-only","--color","never","--ephemeral","-"]
+["exec","--model","gpt-6-luna","--sandbox","read-only","--color","never","--ephemeral","-"]
 
 Working directory:
 C:\path\to\your\repo
@@ -225,6 +225,10 @@ Timeout:
 ```
 
 Add `--skip-git-repo-check` only when intentionally testing a non-Git directory.
+
+Use a model available to the ChatGPT account bound to `CODEX_HOME`. A
+`model_not_found` response means the model/account pair is invalid; change the
+model rather than disabling authentication or adding credentials.
 
 Do not use `--dangerously-bypass-approvals-and-sandbox` in CrossStaff examples.
 

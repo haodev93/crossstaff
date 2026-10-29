@@ -225,10 +225,14 @@ Custom role name: builder
 Adapter: Local command
 Command: codex
 Arguments JSON:
-["exec","--sandbox","read-only","--color","never","--ephemeral","-"]
+["exec","--model","gpt-6-luna","--sandbox","read-only","--color","never","--ephemeral","-"]
 Working directory: absolute path to a test repository
 Timeout: 600000
 ```
+
+The `--model` value must be available to the ChatGPT account bound to this
+`CODEX_HOME`. `gpt-6-luna` is a practical starting point; replace it with a
+model shown by Codex or the current Codex model catalog for your account.
 
 For an isolated login on Windows, add:
 
@@ -319,6 +323,18 @@ Workflows are started with **New workflow**.
 ### Codex says the workspace is read-only
 
 The first workflow intentionally uses `--sandbox read-only`. For a later write task, use `workspace-write` and an isolated test repository or worktree. If CrossStaff itself is running inside another restricted sandbox, Codex may inherit a read-only policy.
+
+### Codex reports `model_not_found`
+
+The model in the Arguments JSON is not available to the current ChatGPT
+account. Change `--model` to a supported model, then rerun the workflow. This
+is a model/account mismatch, not an Adapter failure.
+
+Test the model with the same `CODEX_HOME` before saving the AgentMode:
+
+```bash
+printf "Return exactly MODEL_OK" | codex exec --model YOUR_MODEL --sandbox read-only --color never --ephemeral -
+```
 
 ## Next
 

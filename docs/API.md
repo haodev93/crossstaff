@@ -222,6 +222,8 @@ $codexMode = Invoke-RestMethod `
       command = "codex"
       args = @(
         "exec",
+        "--model",
+        "gpt-6-luna",
         "--sandbox",
         "workspace-write",
         "--color",

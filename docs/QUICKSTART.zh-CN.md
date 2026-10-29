@@ -234,10 +234,14 @@ Mode 名称：Codex Quickstart Mode
 Adapter：本地命令
 Command：codex
 Arguments JSON：
-["exec","--sandbox","read-only","--color","never","--ephemeral","-"]
+["exec","--model","gpt-6-luna","--sandbox","read-only","--color","never","--ephemeral","-"]
 Working directory：你的测试仓库绝对路径
 Timeout：600000
 ```
+
+`--model` 必须是当前 `CODEX_HOME` 绑定的 ChatGPT 账号可用的模型。
+`gpt-6-luna` 是一个实用起点；如果账号不能使用，请替换为 Codex 或当前账号
+模型目录中实际可用的模型。
 
 Windows 如果使用隔离配置，在 Environment JSON 中填写：
 
@@ -328,6 +332,17 @@ DeepSeek Guide Mode，你好
 ### Codex 提示文件系统只读
 
 Quick Start 第一条任务故意使用 `--sandbox read-only`。后续需要写代码时再使用 `workspace-write` 和隔离仓库/Worktree。如果 CrossStaff 本身运行在另一个受限沙箱中，Codex 也可能继承只读策略。
+
+### Codex 返回 `model_not_found`
+
+Arguments JSON 中的模型对当前 ChatGPT 账号不可用。把 `--model` 换成可用
+模型后重新运行工作流。这是模型与账号不匹配，不是 Adapter 失败。
+
+使用同一个 `CODEX_HOME` 先单独验证：
+
+```bash
+printf "Return exactly MODEL_OK" | codex exec --model YOUR_MODEL --sandbox read-only --color never --ephemeral -
+```
 
 ## 下一步
 

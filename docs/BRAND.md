@@ -20,6 +20,7 @@ The penguin holds a connected knowledge node with both flippers. The gesture com
 | Raster icons | `public/assets/crossstaff-app-icon-{180,192,512}.png` | Apple touch icon and installable web app |
 | README banners | `docs/assets/crossstaff-banner-{light,dark}.svg` | GitHub light and dark mode header artwork |
 | Product screenshots | `docs/assets/crossstaff-demo.png`, `docs/assets/crossstaff-demo.zh-CN.png` | English and Chinese GitHub README previews |
+| Social preview | `docs/assets/crossstaff-social.png` | GitHub repository social card (1280×640) |
 | Manifest | `public/site.webmanifest` | Browser installation metadata |
 
 ## Palette
